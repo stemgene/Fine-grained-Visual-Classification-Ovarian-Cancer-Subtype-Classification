@@ -1,4 +1,4 @@
-# Ovarian-Cancer-Subtype-Classification
+# Fine-grained Visual Classification: Ovarian-Cancer-Subtype-Classification
 
 The goal of the UBC Ovarian Cancer subtypE clAssification and outlier detectioN (UBC-OCEAN) is to classify ovarian cancer subtypes. I will build a model trained on the world's most extensive ovarian cancer dataset of histopathology images obtained from more than 20 medical centers.
 
