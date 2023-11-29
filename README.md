@@ -13,3 +13,23 @@ Deep learning models have exhibited remarkable proficiency in analyzing histopat
 ![image](UBC-OCEAN.png)
 
 My work could yield improved accuracy in identifying ovarian cancer subtypes. Better classification would enable clinicians to formulate personalized treatment strategies regardless of geographic location. This targeted approach has the potential to enhance treatment efficacy, reduce adverse effects, and ultimately contribute to better patient outcomes for those diagnosed with this deadly cancer.
+
+# Summary
+
+## EDA
+**Giant image dataset**. There are 538 image samples in the training set. But each image has a giant resolution ratio. The average size of each image is more than 1 GB, the whole training set is 780 GB. 
+
+** K-Fold**. This project doesn't provide the test set. Therefore I implemented the k-fold on the training set to create the validation set.
+
+## Versions and results
+
+| Version | Description | validation accuracy |
+| --      |  --         |   --                |
+|  0      | baseline    |   0.48              |
+
+## Version 0: Baseline
+
+In this version, I built the training and validation processes to complete the baseline result. 
+* The model is EfficientNet b0.
+* I've trained it on the 512 * 512 and 2048 * 2048 datasets, but the result didn't change much.
+* The best accuracy score on the validation set was 0.48.
