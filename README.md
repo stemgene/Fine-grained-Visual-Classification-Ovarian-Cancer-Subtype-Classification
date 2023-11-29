@@ -19,6 +19,7 @@ My work could yield improved accuracy in identifying ovarian cancer subtypes. Be
 ## EDA
 **Giant image dataset**. There are 538 image samples in the training set. But each image has a giant resolution ratio. The average size of each image is more than 1 GB, the whole training set is 780 GB. 
 
+![img]()
 ** K-Fold**. This project doesn't provide the test set. Therefore I implemented the k-fold on the training set to create the validation set.
 
 ## Versions and results
