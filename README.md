@@ -26,11 +26,20 @@ My work could yield improved accuracy in identifying ovarian cancer subtypes. Be
 
 | Version | Description | validation accuracy |
 | --      |  --         |   --                |
-|  0      | baseline    |   0.48              |
+|  0      | baseline    |   0.42              |
+|  1      | TTA         |   0.43              |
 
 ## Version 0: Baseline
 
 In this version, I built the training and validation processes to complete the baseline result. 
 * The model is EfficientNet b0.
 * I've trained it on the 512 * 512 and 2048 * 2048 datasets, but the result didn't change much.
-* The best accuracy score on the validation set was 0.48.
+* The best accuracy score on the validation set was 0.42.
+
+## Version 1: Test Time Augmentation (TTA)
+
+In this version, I applied data augmentation on the validation set. Specifically, I rotated the image 90, 180 and 270 degree and train the data seperately.
+
+Then I made the model ensemble, combine and average the predict results from all best parameters in each training process to vote the robust prediction.
+
+The best accuracy score on the validation set was still 0.43.
