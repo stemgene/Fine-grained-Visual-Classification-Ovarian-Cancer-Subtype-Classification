@@ -38,8 +38,18 @@ In this version, I built the training and validation processes to complete the b
 
 ## Version 1: Test Time Augmentation (TTA)
 
-In this version, I applied data augmentation on the validation set. Specifically, I rotated the image 90, 180 and 270 degree and train the data seperately.
+In this version, I applied data augmentation on the validation set. Specifically, I rotated the image 90, 180, and 270 degrees and trained the data separately.
 
-Then I made the model ensemble, combine and average the predict results from all best parameters in each training process to vote the robust prediction.
+Then I made the model ensemble, combined and averaged the predicted results from all the best parameters in each training process to vote the robust prediction.
 
 The best accuracy score on the validation set was still 0.43.
+
+## Version 2: Fine-grained visual classification (FGCV)
+
+The difficulty of FGCV mainly lies in its intrinsic inter-class similarity, intra-class variation, and limited training data. There is a [paper]((https://paperswithcode.com/paper/learn-from-each-other-to-classify-better)) that discusses this kind of problem and leverages a cross-layer mutual attention learning network (CMAL-Net) as a solution. 
+
+Generally, in a CNN network, the shallower layers extract the contour of the objects, while the deeper layers have bigger vision field and can get other information from the image. The CMAL-Net lets different layers make category prediction and attention region indicating the found clues. That will bring 3 benefits:
+
+1. Help the model focus on discriminative regions
+2. provide more training data
+3. allow different layers to learn from each other to improve the overall performance.
