@@ -46,7 +46,7 @@ The best accuracy score on the validation set was still 0.43.
 
 ## Version 2: Fine-grained visual classification (FGCV)
 
-The difficulty of FGCV mainly lies in its intrinsic inter-class similarity, intra-class variation, and limited training data. There is a [paper]((https://paperswithcode.com/paper/learn-from-each-other-to-classify-better)) that discusses this kind of problem and leverages a cross-layer mutual attention learning network (CMAL-Net) as a solution. 
+Fine-grained visual classification (FGCV) focuses on the classification between objects with tiny differences, for example, to classify the different car models from one factory. The difficulty of FGCV mainly lies in its intrinsic inter-class similarity, intra-class variation, and limited training data. There is a [paper]((https://paperswithcode.com/paper/learn-from-each-other-to-classify-better)) that discusses this kind of problem and leverages a cross-layer mutual attention learning network (CMAL-Net) as a solution. 
 
 Generally, in a CNN network, the shallower layers extract the contour of the objects, while the deeper layers have bigger vision field and can get other information from the image. The CMAL-Net lets different layers make category prediction and attention region indicating the found clues. That will bring 3 benefits:
 
